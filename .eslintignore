@@ -1,0 +1,9 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+# Ignore tools folder
+web-tools/*
+
+assets/bundles/
+
+webpack.config.dev.js
+webpack.config.prod.js

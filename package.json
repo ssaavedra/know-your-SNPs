@@ -1,0 +1,107 @@
+{
+  "name": "knowyoursnps",
+  "version": "0.1.0",
+  "description": "An insight on your human genetics. Written in Django/React",
+  "main": "index.js",
+  "engines": {
+    "npm": ">=3"
+  },
+  "scripts": {
+    "preinstall": "node web-tools/nodeVersionCheck.js",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node web-tools/srcServer.js",
+    "lint": "esw webpack.config.* assets/js web-tools --color",
+    "lint:watch": "npm run lint -- --watch",
+    "build": "babel-node web-tools/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssaavedra/djmessenger.git"
+  },
+  "keywords": [
+    "instant messaging",
+    "react",
+    "redux"
+  ],
+  "author": "Santiago Saavedra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssaavedra/djmessenger/issues"
+  },
+  "homepage": "https://github.com/ssaavedra/djmessenger#readme",
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "fs": "0.0.1-security",
+    "lodash": "4.16.4",
+    "moment": "2.15.1",
+    "react": "15.2.0",
+    "react-bootstrap": "0.30.2",
+    "react-dom": "15.2.0",
+    "react-redux": "4.4.5",
+    "react-router": "2.5.2",
+    "react-router-bootstrap": "0.23.1",
+    "react-router-redux": "4.0.5",
+    "redux": "3.5.2",
+    "redux-form": "6.0.0-rc.4",
+    "redux-saga": "0.12.0",
+    "redux-thunk": "2.1.0",
+    "whatwg-fetch": "1.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "6.10.1",
+    "babel-core": "6.10.4",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-react-display-name": "2.0.0",
+    "babel-polyfill": "6.16.0",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-preset-stage-1": "6.5.0",
+    "babel-register": "^6.9.0",
+    "browser-sync": "2.13.0",
+    "chalk": "1.1.3",
+    "connect-history-api-fallback": "1.2.0",
+    "cross-env": "1.0.8",
+    "css-loader": "0.23.1",
+    "enzyme": "2.4.1",
+    "eslint": "3.3.0",
+    "eslint-config-airbnb": "10.0.0",
+    "eslint-config-standard": "5.3.5",
+    "eslint-config-standard-jsx": "2.0.0",
+    "eslint-config-standard-react": "3.0.0",
+    "eslint-plugin-import": "1.12.0",
+    "eslint-plugin-jsx-a11y": "2.0.1",
+    "eslint-plugin-promise": "2.0.1",
+    "eslint-plugin-react": "6.0.0",
+    "eslint-plugin-standard": "2.0.0",
+    "eslint-watch": "2.1.13",
+    "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "0.9.0",
+    "html-webpack-plugin": "2.22.0",
+    "node-sass": "3.8.0",
+    "npm-run-all": "2.3.0",
+    "open": "0.0.5",
+    "prompt": "1.0.0",
+    "react": "^15.2.0",
+    "react-addons-test-utils": "15.2.0",
+    "react-hot-loader": "3.0.0-beta.5",
+    "redux-immutable-state-invariant": "1.2.3",
+    "replace": "0.3.0",
+    "sass-loader": "4.0.0",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-bundle-tracker": "0.0.93",
+    "webpack-dev-middleware": "1.6.1",
+    "webpack-dev-server": "1.16.2",
+    "webpack-hot-middleware": "2.12.1",
+    "webpack-md5-hash": "0.0.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "standard"
+    ]
+  }
+}

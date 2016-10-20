@@ -1,0 +1,4 @@
+Django~=1.10.2
+djangorestframework~=3.4.7
+django-webpack-loader~=0.3.3
+python-social-auth~=0.2.21
