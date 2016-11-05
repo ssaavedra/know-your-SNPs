@@ -31,6 +31,7 @@
   "homepage": "https://github.com/ssaavedra/djmessenger#readme",
   "dependencies": {
     "bootstrap": "3.3.7",
+    "dna2json": "1.0.1",
     "fs": "0.0.1-security",
     "lodash": "4.16.4",
     "moment": "2.15.1",
