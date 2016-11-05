@@ -1,4 +1,4 @@
-"""knowyourgnome URL Configuration
+"""knowyourgnome api URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -13,19 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf import settings
-from django.conf.urls import include, url
-from django.conf.urls.static import static
-from django.contrib import admin
+from rest_framework.routers import DefaultRouter
 
-from api.urls import urlpatterns as apipatterns
+from . import views
 
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('social.apps.django_app.urls', namespace='social')),
-    url(r'^api/', include(apipatterns)),
-]
 
-urlpatterns = static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
-  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
-  + urlpatterns
+router = DefaultRouter(trailing_slash=False)
+router.register(r'users', views.UserViewSet)
+router.register(r'specimen', views.SpecimenViewSet)
+router.register(r'snp', views.MutationViewSet)
+
+
+urlpatterns = router.urls
